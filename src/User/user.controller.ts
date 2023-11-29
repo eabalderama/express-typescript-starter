@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { ApiErrorCode } from '../constant/enums';
 import { createUser } from './user.service';
 import { z } from 'zod';

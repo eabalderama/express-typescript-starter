@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response, ErrorRequestHandler } from 'express';
+import { Request, Response, ErrorRequestHandler } from 'express';
 import { isHttpError } from 'http-errors';
 
-const ErrorHandler: ErrorRequestHandler = (error: unknown, req: Request, res: Response, next: NextFunction) => {
+const ErrorHandler: ErrorRequestHandler = (error: unknown, req: Request, res: Response) => {
     let errorMessage = 'An unknown error occured';
     let statusCode = 500;
     let stack = undefined;
